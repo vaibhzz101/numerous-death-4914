@@ -1,6 +1,6 @@
 require('dotenv').config()
 const jwt = require('jsonwebtoken');
-const jwtkey = process.env.jwtkey
+const jwtkey = process.env.jwtkey;
 
 
 const authentication = async (req, res, next) => {
@@ -13,10 +13,12 @@ const authentication = async (req, res, next) => {
         req.body.userID = decoded.userID;
         next()
        }
-       else return res.status(400).json({message : " You need to login frist"})
+       else return res.status(400).json({message : "login frist"})
     } catch (error) {
         res.status(400).json({msg : error.message})
     }
 }
 
-module.exports = authentication;
+module.exports ={
+    authentication
+} 
