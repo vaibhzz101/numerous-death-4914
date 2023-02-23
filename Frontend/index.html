@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FireWheel</title>
+    <title>Auto-Mech</title>
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/Login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,15 +21,128 @@
     
   </head>
   <body>
-    <div class="container">
-      <!-- naver -->
-      <div class="navbar-section"></div>
 
-      <!----------------- midpart ------------------->
+
+
+
+
+
+
+
+    <div class="container">
+ <!-- navsection -->
+      <div class="navbar-section"></div>
+       <!-- sign up -->
+ <div class="popup" id="popup">
+  <div id="head">
+      <div id="signUp_head">
+          <h1>SIGN UP</h1>
+          <h3>ALREADY REGISTERED?</h3>
+          <a href="#" onclick="log_openPopup()" >LOG IN</a>
+      </div>
+      <div id="cross-cont">
+       <p id="cross" onclick="closePopup()">⨉</p>
+      </div>
+  </div>
+
+
+  <form action="" id="form">
+
+      <input type="text" placeholder="NAME" name="ffirst_name" id="name"><span id="first_error"></span>
+
+      <!-- <input type="text" placeholder="LAST NAME" name="flast_name" id="lastname"><span id="last_error"></span> -->
+
+      <input type="email" placeholder="EMAIL" name="femail" id="email"><span id="email_error"></span>
+
+      <input type="number" placeholder="MOBILE NO." name="fmobile" id="mobile"><span id="mobile_error"></span>
+
+      <input type="date" placeholder="DOB" name="fbirth_date" id="birthdate"><span id="date_error"></span> <br>
+
+      <input type="radio" name="gender" id="gender" value="male"><label for="">MALE</label><br>
+      <input type="radio" name="gender" id="gender2" value="female"><label for="">FEMALE</label><br>
+      <span id="gender_error"></span>
+
+      <input type="password" placeholder="PASSWORD" name="fpassword" id="password"><span
+          id="password_error"></span>
+
+      <input type="password" placeholder="CONFIRM PASSWORD" name="fcpasspwrd" id="cpassword"><span
+          id="cpassword_error"></span>
+
+      <input id="signup_but" type="submit" value="SIGN UP">
+  </form>
+  <h3 id="or">---OR---</h3>
+  <div id="Fb_Gog_but">
+
+      <button id="google">
+          <div>
+              <b>
+                  <p>G</p>
+              </b>
+          </div>
+          <div class="anchor"><a href="">LOG IN WITH GOOGLE</a></div>
+      </button>
+      <button id="facebook">
+          <div>
+              <b>
+                  <p>f</p>
+              </b>
+          </div>
+          <div class="anchor"><a href="">LOG IN WITH FACEBOOK</a></div>
+      </button>
+  </div>
+
+
+</div>
+
+<!-- //login -->
+<div class="log_popup" id="log_popup">
+  <div id="log_head">
+      <div id="log_signIn_head">
+          <h1>LOG IN</h1>
+          <h3>NEW TO Auto-Mech?</h3>
+          <a href="#" onclick="openPopup()" >SIGN UP</a>
+      </div>
+      <div id="log_cross-cont">
+          <p id="log_cross" onclick="log_closePopup()">⨉</p>
+      </div>
+  </div>
+
+  <form action="" id="log_form">
+      <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS" name="femail" id="email"><span id="log_email_error"></span>
+
+      <input type="password" placeholder="ENTER YOUR PASSWORD" name="fpassword" id="password"><span
+          id="log_password_error"></span>
+
+      <input id="log_Login_but" type="submit" value="LOG IN">
+  </form>
+  <h3 id="log_or">---OR---</h3>
+  <div id="log_Fb_Gog_but">
+
+      <button id="log_google">
+          <div>
+              <b>
+                  <p>G</p>
+              </b>
+          </div>
+          <div class="log_anchor"><a href="">LOG IN WITH GOOGLE</a></div>
+      </button>
+      <button id="log_facebook">
+          <div>
+              <b>
+                  <p>f</p>
+              </b>
+          </div>
+          <div class="log_anchor"><a href="">LOG IN WITH FACEBOOK</a></div>
+      </button>
+  </div>
+
+</div>
+
+      <!----------------- midsection------------------->
       <div class="midpart ">
-      <div>
-        <img style="width: 110%; margin-left: -70px;" src="./resources/h1.png" alt="">
-        <img style="width: 110%; margin-left: -70px;" src="./resources/h2.png" alt="">
+      <div class="midpart-img">
+      <img  src="./resources/midpart h1.png" alt="">
+        <img src="./resources/midpart h2.png" alt=""> -->
 
       </div>
       <div style="margin-top: 50px;">
