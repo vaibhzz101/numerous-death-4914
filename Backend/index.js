@@ -2,13 +2,15 @@ const express = require("express")
 require('dotenv').config()
 const connection = require('./config/db')
 // userRouters
-const {userRouter}=require("./routes/user.route")
-const {productRouter}= require("./routes/product.route")
+const {userRouter}=require("./routes/users.route")
+const {productRouter}= require("./routes/products.route")
 const {cartRouter}=require("./routes/cart.route")
-const authentication  = require('./middleware/authentication.middleware')
+const {authentication}  = require('./middlewares/authentication.middleware')
 const cors = require('cors');
+const { UserModel } = require("./models/user.model")
 
 const app = express()
+UserModel
 app.use(express.json())
 
 app.use(cors())
@@ -18,7 +20,7 @@ app.get ("/", (req,res)=>{
 })
 // Routers
 app.use('/users', userRouter)
-// // Authentication
+// // // Authentication
 app.use(authentication)
 app.use('/products', productRouter)
 app.use('/cart', cartRouter)
