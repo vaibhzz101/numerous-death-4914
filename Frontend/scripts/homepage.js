@@ -91,12 +91,14 @@ function log_closePopup() {
 
 //sign up 
 
+//sign up 
+
 
 let myform = document.getElementById("form")
 // let cpassword = document.getElementById("cpassword")
 
 let first_name_error = document.getElementById("first_error")
-let last_name_error = document.getElementById("last_error")
+// let last_name_error = document.getElementById("last_error")
 let mobile_error = document.getElementById("mobile_error")
 let email_error = document.getElementById("email_error")
 let date_error = document.getElementById("date_error")
@@ -108,8 +110,8 @@ myform.addEventListener("submit", (e) => {
     e.preventDefault();
 
     var userData = {
-        firstname: myform.firstname.value,
-        lastname: myform.lastname.value,
+       name: myform.firstname.value,
+        // lastname: myform.lastname.value,
         email: myform.email.value,
         mobile: myform.mobile.value,
         DOB: myform.birthdate.value,
@@ -119,14 +121,14 @@ myform.addEventListener("submit", (e) => {
     }
 
     //    validation of form
-    if (userData.firstname !== "" && userData.lastname !== "" && userData.email !== "" && userData.email !== "" && userData.mobile.length == 10 && userData.DOB !== "" && userData.gender !== "" && userData.password.length >= 6 && myform.cpassword.value == userData.password) {
+    if (userData.tname !== ""  && userData.email !== "" && userData.email !== "" && userData.mobile.length == 10 && userData.DOB !== "" && userData.gender !== "" && userData.password.length >= 6 && myform.cpassword.value == userData.password) {
         first_name_error.innerHTML = null; date_error.innerHTML = null; gender_error.innerHTML = null;
         last_name_error.innerHTML = null; password_error.innerHTML = null; cpassword_error.innerHTML = null;
         email_error.innerHTML = null; mobile_error.innerHTML = null;
 
         // alert(`Hey ${userData.firstname} ${userData.lastname}! You Signed Up Successfully.`)
         swal({
-            title: `Congrats! ${userData.firstname} ${userData.lastname}`,
+            title: `Congrats! ${userData.name}`,
             text: "You succefully registered!",
             icon: "success",
           });
@@ -134,11 +136,9 @@ myform.addEventListener("submit", (e) => {
         SignUp_user(userData);
 
     } else {
-        userData.firstname == "" ? first_name_error.innerHTML = "*Enter First Name!"
+        userData.name == "" ? first_name_error.innerHTML = "*Enter  Name!"
             : first_name_error.innerHTML = null;
 
-        userData.lastname == "" ? last_name_error.innerHTML = "*Enter Last Name!"
-            : last_name_error.innerHTML = null;
 
         userData.email == "" ? email_error.innerHTML = "*Enter Email!"
             : email_error.innerHTML = null;
@@ -164,7 +164,7 @@ myform.addEventListener("submit", (e) => {
 
 
 function SignUp_user(obj) {
-    fetch("https://63c67422dcdc478e15c1bf8d.mockapi.io/users", {
+    fetch(`${baseurl}/users/register`, {
         method: "POST",
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(obj)
@@ -173,19 +173,8 @@ function SignUp_user(obj) {
         .then(responseObject => responseObject.json())
         .then((data) => {
             console.log(data)
-            location.href = "../html/homechauff.html"
+            location.href = "./index.html"
         })
-}
-
-
-
-let popup = document.getElementById("popup");
-
-function openPopup() {
-  popup.classList.add("open-popup");
-}
-function closePopup() {
-  popup.classList.remove("open-popup");
 }
 
 
