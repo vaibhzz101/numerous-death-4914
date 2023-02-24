@@ -1,7 +1,7 @@
 
 
-import hideLoading from "../components/hideLoading.components.js";
-import loading from "../components/loading.components.js";
+import hideLoading from "../components/hideLoading.components";
+import loading from "../components/loading.components";
 
 const baseURL = "https://elegant-gold-starfish.cyclic.app";
 
@@ -13,7 +13,7 @@ async function fetchData() {
   loading();
   console.log("data loaded");
   try {
-    let response = await fetch(`${baseURL}/products`, {
+    let response = await fetch(`https://elegant-gold-starfish.cyclic.app/products`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
