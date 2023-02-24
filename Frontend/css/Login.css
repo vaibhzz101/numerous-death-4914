@@ -78,7 +78,7 @@
 
 
 
-#log_form {
+#signinfrom {
     /* border:2px dashed red; */
     width: 85%;
     margin: auto;
@@ -86,7 +86,7 @@
 
 }
 
- #log_form input {
+ #signinfrom input {
     padding-left:10px;
     font-size: 100%;
     height: 2.7rem;
@@ -98,18 +98,27 @@
     border-radius:10px;
 }
 
-#log_form #gender {
+/* #log_form #gender {
 
     height: 1rem;
     width: 10%;
     display: inline;
 
-}
+} */
 
- #log_form #log_Login_but {
+ #signinfrom #log_Login_but {
     border: 1px solid red;
     color: red;
     font-weight: 600;
+    padding-left:10px;
+    font-size: 100%;
+    height: 2.7rem;
+    width: 100%;
+    margin-top: 8%;
+    border: none;
+    /* background-color: #e1dfdf; */
+    display: block;
+    border-radius:10px;
     
     
 }

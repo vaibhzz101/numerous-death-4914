@@ -38,30 +38,38 @@
       </div>
     
    
-      <form action="" id="form">
+      <form action="" id="signupform">
 
-          <!-- <input type="text" placeholder="FIRST NAME" name="ffirst_name" id="firstname"><span id="first_error"></span> -->
+           <div class="form-group">
+          
+            <input type="text" class="form-control" placeholder="username" required name="name" id="name"><span id="last_error"></span>
+           </div>
+         
+           <div class="form-group">
+            <input type="email" placeholder="EMAIL" name="email" class="form-control" id="email" required  aria-describedby="emailHelp" ><span id="email_error"></span>
+           </div>
+          
+          <div class="form-group">
+            <input type="number" placeholder="MOBILE NO." name="phone" class="form-control" id="phone"><span id="mobile_error"></span>
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="PASSWORD" name="password" required id="password"><span
+            id="password_error"></span>
+          </div>
+          <button type="submit" id="signup_but" class="btn btn-outline-danger btn-block">Submit</button>
+          <!-- <input type="date" placeholder="DOB" name="fbirth_date" id="birthdate"><span id="date_error"></span> <br> -->
+<!-- <div class="form-group">
+  <input type="radio" name="gender" id="gender" value="male"><label for="">MALE</label><br>
+  <input type="radio" name="gender" id="gender2" value="female"><label for="">FEMALE</label><br>
+  <span id="gender_error"></span>
+</div> -->
+         
 
-          <input type="text" placeholder=" NAME" name="name" id="name"><span id="last_error"></span>
+          
 
-          <input type="email" placeholder="EMAIL" name="femail" id="email"><span id="email_error"></span>
 
-          <input type="number" placeholder="MOBILE NO." name="fmobile" id="mobile"><span id="mobile_error"></span>
-
-          <input type="date" placeholder="DOB" name="fbirth_date" id="birthdate"><span id="date_error"></span> <br>
-
-          <input type="radio" name="gender" id="gender" value="male"><label for="">MALE</label><br>
-          <input type="radio" name="gender" id="gender2" value="female"><label for="">FEMALE</label><br>
-          <span id="gender_error"></span>
-
-          <input type="password" placeholder="PASSWORD" name="fpassword" id="password"><span
-              id="password_error"></span>
-
-          <input type="password" placeholder="CONFIRM PASSWORD" name="fcpasspwrd" id="cpassword"><span
-              id="cpassword_error"></span>
-
-          <input id="signup_but" type="submit" value="SIGN UP">
-      </form>
+      
+</form>
       <h3 id="or">---OR---</h3>
       <div id="Fb_Gog_but">
 
@@ -99,13 +107,18 @@
           </div>
       </div>
 
-      <form action="" id="log_form">
-          <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS" name="femail" id="log_email"><span id="log_email_error"></span>
-
-          <input type="password" placeholder="ENTER YOUR PASSWORD" name="fpassword" id="log_password"><span
-              id="log_password_error"></span>
-
-          <input id="log_Login_but" type="submit" value="LOG IN">
+      <form action="" id="signinfrom">
+        <div class="form-group">
+          <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS" name="email" class="form-control" id="email"><span id="log_email_error"></span>
+        </div>
+        
+      <div class="form-froup">
+        <input type="password" placeholder="ENTER YOUR PASSWORD" name="password" id="password"><span
+        id="log_password_error"></span>
+      </div>
+       
+      <button type="submit" id="log_Login_but" class="btn btn-outline-danger btn-block">Submit</button>
+          <!-- <input id="log_Login_but" type="submit" value="LOG IN"> -->
       </form>
       <h3 id="log_or">---OR---</h3>
       <div id="log_Fb_Gog_but">
@@ -477,7 +490,7 @@
     <div  style="width: 100%;" class="pop-handler"></div>
   </body>
 </html>
-<!-- <script src="./scripts/homepage.js" type="module"></script> -->
+<script src="./scripts/index.js" type="module"></script>
 
 <script>
   var slideIndex = 1;
@@ -513,9 +526,6 @@ function log_closePopup() {
     log_popup.classList.remove("log_open-popup");
 }
 
-
-
-  
 let popup = document.getElementById("popup");
 function openPopup() {
   popup.classList.add("open-popup");
@@ -523,9 +533,5 @@ function openPopup() {
 function closePopup() {
   popup.classList.remove("open-popup");
 }
-
-
-// login
-
 
 </script>
