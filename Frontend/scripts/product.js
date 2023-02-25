@@ -3,7 +3,7 @@
 import hideLoading from "../components/hideLoading.components";
 import loading from "../components/loading.components";
 
-const baseURL = "https://elegant-gold-starfish.cyclic.app";
+const baseURL = "https://localhost:8900";
 
 
 
