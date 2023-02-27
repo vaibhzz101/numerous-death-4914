@@ -10,7 +10,7 @@ loading()
 async function fetchNote() {
     try {
 
-        const res = await fetch(`https://rich-ruby-kitten-toga.cyclic.app/allusers`, {
+        const res = await fetch(`https://elegant-gold-starfish.cyclic.app/allusers`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
