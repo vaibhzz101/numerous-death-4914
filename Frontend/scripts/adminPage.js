@@ -1,7 +1,7 @@
 import hideLoading from "../components/hideLoading.components.js";
 import loading from "../components/loading.components.js";
 
-const baseURL = "https://rich-ruby-kitten-toga.cyclic.app";
+const baseURL = "https://elegant-gold-starfish.cyclic.app";
 
 // fetching html tags
 
