@@ -25,9 +25,9 @@ Externally library used in FireWheel `Bootstrap`.
 
 
 
-# backend of Firewheel -> [BaseURL](https://elegant-gold-starfish.cyclic.app/)
+# backend of Auto-Mech-> [BaseURL](https://elegant-gold-starfish.cyclic.app/)
 
-## npm packages used in Firewheel
+## npm packages used in Auto-Mech
 
    * express     : for setup the server 
    * mongoose    : for makign connections between server and mongodb
@@ -75,17 +75,17 @@ Method :  post -> localhost:3500/products/add
     "product_id": 332,
     "product_img": "https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/global/images/tires/full-60/h175/TuranzaEL40002RFT.png",
     "brand_img": "https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/global/images/tires/brands/Bridgestone_logo.png",
-    "product_name": "Mayank raj",
+    "product_name": "VAIBHAV SHEVNE",
     "average_rating": "",
     "review_count": "",
     "product_specs": "chikkuuu",
-    "stability": "Stability: Mayank",
-    "traction": "Traction: Mayank",
-    "dry_traction": "Dry Traction: Mayank",
-    "ride_comfort": "Ride Comfort: Mayank",
-    "tire_wear": "Tire Wear: Mayank",
-    "wet_traction": "Wet Traction: 8",
-    "noise_level": "Noise Level: Mayank",
+    "stability": "Stability: vaibhavk",
+    "traction": "Traction: ",
+    "dry_traction": "Dry Traction: ",
+    "ride_comfort": "Ride Comfort: ",
+    "tire_wear": "Tire Wear: ",
+    "wet_traction": "Wet Traction: ",
+    "noise_level": "Noise Level: ",
     "__v": 0
     }
 ```
